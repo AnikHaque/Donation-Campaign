@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+
 import './index.css'
 import {
   createBrowserRouter,
@@ -12,6 +13,8 @@ import ErrorPage from './components/ErrorPage/ErrorPage';
 
 import DonationDetails from './components/DonationDetails/DonationDetails';
 import AppliedDonations from './components/AppliedDonation/AppliedDonations';
+import MainStatistics from './components/Statistics/MainStatistics';
+import Statistics from './components/Statistics/Statistics';
 
 const router = createBrowserRouter([
   {
@@ -28,11 +31,17 @@ const router = createBrowserRouter([
         element:<AppliedDonations></AppliedDonations>,
         loader: () => fetch('/donation.json') // warning: only load the data you need. do not load all the data
       },
-      // {
-      //   path: '/applied', 
-      //   element: <AppliedJobs></AppliedJobs>,
-      //   loader: () => fetch('/donations.json') // warning: only load the data you need. do not load all the data
-      // },
+      {
+        path: '/statisticsmain', 
+        element:<MainStatistics></MainStatistics>,
+        loader: () => fetch('/donation.json') // warning: only load the data you need. do not load all the data
+      },
+      {
+        path: '/statistics', 
+        element:<Statistics></Statistics>,
+      // warning: only load the data you need. do not load all the data
+      },
+     
       
       {
         path: '/donation/:id',

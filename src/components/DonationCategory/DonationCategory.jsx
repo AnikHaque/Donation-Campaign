@@ -44,30 +44,19 @@ const DonationCategory = () => {
   };
 
   return (
-    <div>
-{/*
-  Heads up! 👋
+    <div> 
 
-  This component comes with some `rtl` classes. Please remove them if they are not needed in your project.
-*/}
-
-
-      <section
-        className="relative bg-[url(https://wallpapercave.com/wp/wp2789220.jpg)] bg-cover h-[600px] bg-center bg-no-repeat text-white relative"
-      >
-        <div style={overlayStyle}></div> {/* White Overlay */}
-        
-        <div style={{ position: 'relative', zIndex: 1 }}> {/* Higher z-index to keep content above the overlay */}
-          <h1 className="text-3xl text-black text-center pt-72 font-extrabold sm:text-5xl">
-            I Grow By Helping People In Need
-          </h1>
-
-          <input
+      <div className="hero min-h-screen" style={{backgroundImage: 'url(https://wallpapercave.com/wp/wp2789220.jpg)'}}>
+  <div className="hero-overlay bg-white bg-opacity-60"></div>
+  <div className="">
+    <div className="max-w-3xl">
+      <h1 className="mb-5 text-5xl font-bold">I Grow By Helping People In Need</h1>
+      <input
             type="text"
             placeholder="Search"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="mt-4 p-2 border rounded-md ml-72 w-72"
+            className="mt-4 p-2 w-96 ml-32 h-14 border rounded-md "
           />
           <button
             onClick={handleSearchClick}
@@ -75,10 +64,11 @@ const DonationCategory = () => {
           >
             Search
           </button>
-        </div>
-        
-        {/* ... (existing code) */}
-      </section>
+      
+      
+    </div>
+  </div>
+</div>
 
 
 
