@@ -32,15 +32,11 @@ const router = createBrowserRouter([
         loader: () => fetch('/donation.json') // warning: only load the data you need. do not load all the data
       },
       {
-        path: '/statisticsmain', 
+        path: '/statistics', 
         element:<MainStatistics></MainStatistics>,
         loader: () => fetch('/donation.json') // warning: only load the data you need. do not load all the data
       },
-      {
-        path: '/statistics', 
-        element:<Statistics></Statistics>,
-      // warning: only load the data you need. do not load all the data
-      },
+      
      
       
       {
