@@ -3,12 +3,12 @@
 
 #Project Features:
 
---- Display All Categories
+--- <b>Display All Categories</b> : Here we can see all the categories with their title, category, description. We can see the details of each category also.
 
---- Donate Service
+--- <b>Donate Service</b> : We have a donate button. We can donate . The donation will save in local storage. 
 
----Save & Show all donations
+--- <b>Save & Show all donations</b> : we can see all the donations
 
---- Calculate Statistics
+--- <b> Calculate Statistics</b> : We can calculate the overall statistics. We can calculate the percentage between the total categories and total donations.
 
---- Filtering Categories
+--- <b> Filtering Categories</b> : We have a search button in banner. We can search specific categories only.
