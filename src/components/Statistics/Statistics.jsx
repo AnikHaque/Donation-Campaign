@@ -26,13 +26,13 @@ const Statistics = ({ totalDonations, yourDonations }) => {
         >
           {data.map((entry, index) => (
             <Cell key={`cell-${index}`} fill={entry.color}>
-              {/* Show the percentage inside the cell */}
+             
               <text
-                x={200} // Adjust the x-coordinate as needed
-                y={200} // Adjust the y-coordinate as needed
-                fill="white" // Set the text color
-                textAnchor="middle" // Center-align the text
-                dominantBaseline="middle" // Vertically center the text
+                x={200} 
+                y={200} 
+                fill="white" 
+                textAnchor="middle" 
+                dominantBaseline="middle" 
               >
                 {`${(entry.value / totalDonations * 100).toFixed(0)}%`}
               </text>
