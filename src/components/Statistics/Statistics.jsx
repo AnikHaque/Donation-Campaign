@@ -8,8 +8,8 @@ const Statistics = ({ totalDonations, yourDonations }) => {
 
   // Create data for the pie chart
   const data = [
-    { name: 'Your Donations', value: yourDonations, color: '#FF6384' },
-    { name: 'Remaining Donations', value: totalDonations - yourDonations, color: 'green' },
+    { value: (yourDonations / 100) * 1000, name: '%', color: '#FF6384' },
+    { name: '%', value: (((totalDonations - yourDonations) / 100) * 1000) - (yourDonations / 100) * 1000 , color: 'green' },
   ];
 
   return (
@@ -27,15 +27,7 @@ const Statistics = ({ totalDonations, yourDonations }) => {
           {data.map((entry, index) => (
             <Cell key={`cell-${index}`} fill={entry.color}>
              
-              <text
-                x={200} 
-                y={200} 
-                fill="white" 
-                textAnchor="middle" 
-                dominantBaseline="middle" 
-              >
-                {`${(entry.value / totalDonations * 100).toFixed(0)}%`}
-              </text>
+             
             </Cell>
           ))}
         </Pie>
